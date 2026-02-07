@@ -1,0 +1,69 @@
+# docker-compose.yml
+# This file defines all services  chat app
+
+version: "3.8" #docker compose version
+
+services:
+  #service 1 postgres database
+  postgres:
+    #image to use from docker hub
+    image: postgres:15-alpine
+    container_name: postgres
+
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: chatuser
+      POSTGRES_PASSWORD: chatpass123
+      POSTGRES_DB: chatdb
+
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U chatuser -d chatdb"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    #after 5 retries it will stop the container and show error in logs
+
+  #service 2
+  redis:
+    image: redis:7-alpine
+    container_name: redis
+
+    restart: unless-stopped
+    command: redis-server --requirepass redispass123 #to setup password for redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  #service 3 pg admin
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: chat-pgadmin
+    restart: unless-stopped
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@chatapp.com
+      PGADMIN_DEFAULT_PASSWORD: admin123
+      PGADMIN_CONFIG_SERVER_MODE: "False"
+    ports:
+      - "5050:80"
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    depends_on:
+      - postgres
+volumes:
+  postgres_data:
+  redis_data:
+  pgadmin_data:
+
+networks:
+  default:
+    name: chatapp-network
