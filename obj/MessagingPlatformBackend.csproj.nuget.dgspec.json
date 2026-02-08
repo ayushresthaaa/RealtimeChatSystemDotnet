@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\DotnetProjects\\MessagingPlatformBackend\\MessagingPlatformBackend.csproj": {}
+    "C:\\Users\\ayush\\RealTimeChatApp\\RealtimeChatSystemDotnet\\MessagingPlatformBackend.csproj": {}
   },
   "projects": {
-    "C:\\DotnetProjects\\MessagingPlatformBackend\\MessagingPlatformBackend.csproj": {
+    "C:\\Users\\ayush\\RealTimeChatApp\\RealtimeChatSystemDotnet\\MessagingPlatformBackend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\DotnetProjects\\MessagingPlatformBackend\\MessagingPlatformBackend.csproj",
+        "projectUniqueName": "C:\\Users\\ayush\\RealTimeChatApp\\RealtimeChatSystemDotnet\\MessagingPlatformBackend.csproj",
         "projectName": "MessagingPlatformBackend",
-        "projectPath": "C:\\DotnetProjects\\MessagingPlatformBackend\\MessagingPlatformBackend.csproj",
+        "projectPath": "C:\\Users\\ayush\\RealTimeChatApp\\RealtimeChatSystemDotnet\\MessagingPlatformBackend.csproj",
         "packagesPath": "C:\\Users\\ayush\\.nuget\\packages\\",
-        "outputPath": "C:\\DotnetProjects\\MessagingPlatformBackend\\obj\\",
+        "outputPath": "C:\\Users\\ayush\\RealTimeChatApp\\RealtimeChatSystemDotnet\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ayush\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -45,9 +45,69 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.3.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[10.0.0, )"
+            },
+            "Microsoft.AspNetCore.SignalR.StackExchangeRedis": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Serilog.Sinks.Console": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Serilog.Sinks.File": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "StackExchange.Redis": {
+              "target": "Package",
+              "version": "[2.7.10, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[7.3.1, )"
             }
           },
           "imports": [

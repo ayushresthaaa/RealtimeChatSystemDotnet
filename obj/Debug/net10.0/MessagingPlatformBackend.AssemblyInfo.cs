@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MessagingPlatformBackend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9e0a0f47051d25772d5613ded0d83783c00a35b2")]
 [assembly: System.Reflection.AssemblyProductAttribute("MessagingPlatformBackend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MessagingPlatformBackend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
