@@ -9,6 +9,7 @@ namespace MessagingPlatformBackend.Data
     {
         public ChatDbContext(DbContextOptions<ChatDbContext> options) : base(options)
         {
+                //this needs object during dependency injection, so we are passing it through the constructor and calling the base constructor of DbContext with the options parameter. This allows us to configure the DbContext with the necessary options, such as the database provider and connection string, when we register it in the dependency injection container in Program.cs.
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -22,7 +23,7 @@ namespace MessagingPlatformBackend.Data
 
             // Configure the User entity
             modelBuilder.Entity<User>(entity=>
-            {
+            {   
                 entity.HasKey(u=>u.Id); 
                 entity.HasIndex(u=> u.Username).IsUnique();
                 entity.HasIndex(u=> u.Email).IsUnique();

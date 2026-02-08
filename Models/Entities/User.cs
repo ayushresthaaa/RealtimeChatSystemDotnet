@@ -2,13 +2,13 @@ using System.ComponentModel.DataAnnotations;//this is for data annotations like 
 namespace MessagingPlatformBackend.Models.Entities
 {
     public class User
-    {
+    {   
         public Guid Id { get; set; } // Unique identifier for the user
 
         [Required]
         [StringLength(50, MinimumLength = 3)]
         public string Username { get; set; } = string.Empty;  // Username of the user    
-
+        
         [Required]
         [EmailAddress]
         [StringLength(200)]
