@@ -31,6 +31,5 @@ namespace MessagingPlatformBackend.Data
                 entity.Property(u=> u.Email).IsRequired().HasMaxLength(200);
             });
         }
-
     }
 }
